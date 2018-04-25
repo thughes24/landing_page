@@ -1,0 +1,50 @@
+!!! 5
+%html(lang="en-US")
+	%head
+		%title=@data["title"]
+		%meta{:content => "width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no", :name => "viewport"}
+		%link{:href => "/favicon.png", :rel => "shortcut icon"}
+		%link{:rel => "stylesheet", :type => "text/css", :href => '/index.css'}
+		%link{:href => "https://fonts.googleapis.com/css?family=Montserrat|Open+Sans", :rel => "stylesheet"}
+		%link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", :integrity => "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", :rel => "stylesheet"}/
+		%script{:crossorigin => "anonymous", :integrity => "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"}
+	%body
+		.container.white
+			%br
+			.logo=@data["title"]
+			.row.center-div
+				.col-sm-12.offset-md-1.col-md-5
+					-if @error
+						%p.bold=@error
+					%h1.open-sans=@data["left_header"]
+					%p.easy-read.d-none.d-sm-block=@data["left_description"]
+					%img.text-center.center.d-none.d-md-block{src: '/big_arrow.png', width: '250'}	
+				.col-sm-12.col-md-5.easy-read
+					-5.times do
+						%br.d-none.d-md-block
+					%p.bold.d-block.d-sm-none=@data["small_offer"]
+					%p.bold.d-none.d-sm-block=@data["right_description"] 
+					%p.small=@data["right_offer"]
+					%form{action: '/request-access', method: 'post'}
+						%input.sign-up-input{type: 'email', placeholder: 'Your Email Address...', name: 'email'}
+						%input.sign-up-submit{type: 'submit', value: 'Request Access'}
+					%p.small * We will never send you spam, ever ever!
+-#%body
+-#	.wrapper
+-#		%p.bold.logo.montserrat=@data["title"]
+-#		.content-area
+-#			.left-area.easy-read
+-#				-if @error
+-#					%p.bold=@error
+-#				%h1.open-sans=@data["left_header"]
+-#				%p=@data["left_description"]
+-#				%img.text-center.center{src: '/big_arrow.png', width: '250'}
+-#			.right-area.easy-read
+-#				-6.times do
+-#					%br.hidden-sm-down
+-#				%p.bold=@data["right_description"] 
+-#				%p.small=@data["right_offer"]
+-#				%form{action: '/request-access', method: 'post'}
+-#					%input.sign-up-input{type: 'email', placeholder: 'Your Email Address...', name: 'email'}
+-#					%input.sign-up-submit{type: 'submit', value: 'Request Access'}
+-#				%p.small * We will never send you spam, ever ever!

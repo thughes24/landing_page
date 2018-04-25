@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'rack'
+gem 'sinatra'
+gem 'levenshtein'
+gem 'haml'
+gem 'rest-client'
+gem 'json'
+gem 'sass'
+gem 'pry'
+gem 'rack-ssl'

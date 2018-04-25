@@ -1,0 +1,13 @@
+!!! 5
+%html(lang="en-US")
+	%head
+		%title=@data["title"]
+		%link{:href => "/favicon.png", :rel => "icon"}
+		%link{:rel => "stylesheet", :type => "text/css", :href => '/index.css'}
+		%link{:href => "https://fonts.googleapis.com/css?family=Montserrat|Open+Sans", :rel => "stylesheet"}
+	%body
+		%p.bold.logo.montserrat=@data["title"]
+		.content-area
+			.smack-center
+				%h1.open-sans Thank You For Requesting Access.
+				%p You have been added to the list and will recieve an email when a spot opens up.

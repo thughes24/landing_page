@@ -1,0 +1,134 @@
+html {
+	padding: 0 !important;
+	margin: 0 !important;
+	height:100%;
+}
+body {
+	padding: 0 !important;
+	margin: 0 !important;
+	background: #425673;
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/background_phone.jpg') no-repeat;
+	background-position-y: -850px;
+	background-size: cover;
+	color: white;
+	text-align: justify;
+	height: 100%;
+	@media(max-width: 460px) {
+		background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/background_phone.jpg') no-repeat;
+		bcakground-position-y: -800px;
+	}
+}
+
+.center-div {
+	margin-top: 6%;
+	@media(max-width: 420px) {
+		margin-top:20%;
+	}
+}
+
+.easy-read {
+	line-height: 30px;
+}
+
+.center {
+	margin: 0 auto;
+}
+.text-center {
+	text-align:center;
+}
+.bold {
+	font-weight: bold;
+}
+.small {
+	font-size: 80%;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.open-sans {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.montserrat {
+	font-family: 'Montserrat', sans-serif;
+}
+.sign-up-input {
+	width: 93%;
+	height: 40px;
+	background: none;
+	border: 2px solid rgba(255,255,255,0.8);
+	border-radius: 2px;
+	padding-left: 7%;
+	color: rgba(255,255,255,0.8);
+	font-size: 80%;
+	line-height: 40px;
+	vertical-align:middle;
+	&:focus {
+		color: white !important;
+		border: 2px solid white;
+		outline: none;
+	}
+	@media(max-width: 460px) {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+input::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.8) !important;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: white !important;
+}
+
+.content-area {
+	margin: 0 auto;
+	width:80%;
+	padding:10px;
+	padding-top:3vh;
+}
+
+.white {
+	color: white !important;
+}
+
+.left-area {
+	width:50%;
+	float:left;
+	padding: 10px;
+}
+.right-area {
+	width:42%;
+	padding:10px;
+	float:right;
+}
+.sign-up-submit {
+	text-align: center;
+	margin:0 auto;
+	margin-top:20px;
+	color: white;
+	width: 40%;
+	height: 40px;
+	background: none;
+	border: 2px solid white;
+	border-radius: 2px;
+	font-size:80%;
+	@media(max-width:460px) {
+		width:100%;
+	}
+}
+.logo {
+	padding-left: 5%;
+	padding-top:5px;
+
+}
+.smack-center {
+	width: fit-content;
+	margin: 0 auto;
+	padding-top: 20vh;
+}
+.red {
+	color: red;
+}
