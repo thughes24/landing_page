@@ -14,9 +14,15 @@ class LandingPage < Sinatra::Base
 
 	post '/request-access' do
 		@email = params["email"]
-		if params[:email] && !File.open("list.txt").read.split(",").include?(@email) 
-			File.open("list.txt", "a") do |f|
-				f << "#{@email},"
+		if params[:email] 
+			if File.exists?('list.txt') && !File.open("list.txt").read.split(",").include?(@email)
+				File.open("list.txt", "a") do |f|
+					f << "#{@email},"
+				end
+			else
+				File.open('list.txt', 'w') do |f|
+					f.write("#{@email},")
+				end
 			end
 			redirect '/thank-you'
 		else
